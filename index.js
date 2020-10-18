@@ -6,7 +6,7 @@ const catogery = 'technology';
 //grab the news container
 newsAccordian = document.getElementById('newsAccordian');
 const xhr = new XMLHttpRequest
-xhr.open('GET', `http://newsapi.org/v2/top-headlines?country=${country}&category=${catogery}&apiKey=${apikey}`, true);
+xhr.open('GET', true, Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri `https:newsapi.org/v2/top-headlines?country=${country}&category=${catogery}&apiKey=${apikey}`);
 xhr.onload = function () {
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
