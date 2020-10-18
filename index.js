@@ -7,7 +7,7 @@ const catogery = 'technology';
 newsAccordian = document.getElementById('newsAccordian');
 
 const xhr = new XMLHttpRequest
-xhr.open('GET', true, `https:newsapi.org/v2/top-headlines?country=${country}&category=${catogery}&apiKey=${apikey}`);
+xhr.open('GET', `http://newsapi.org/v2/top-headlines?country=${country}&category=${catogery}&apiKey=${apikey}`, true);
 xhr.onload = function () {
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
