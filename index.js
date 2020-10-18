@@ -2,12 +2,12 @@ console.log('hello');
 
 country = 'in';
 let apikey = 'b7019880a6df40b490f2947dca2ecb81';
-const catogery = 'technology';
+const sources = 'google-news-in';
 //grab the news container
 newsAccordian = document.getElementById('newsAccordian');
 
 const xhr = new XMLHttpRequest
-xhr.open('GET', `http://newsapi.org/v2/top-headlines?country=${country}&category=${catogery}&apiKey=${apikey}`, true);
+xhr.open('GET', `http://newsapi.org/v2/top-headlines?sources=${sources}&apiKey=${apikey}`, true);
 xhr.onload = function () {
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
@@ -43,5 +43,4 @@ xhr.onload = function () {
     }
 }
 xhr.send();
-
 
