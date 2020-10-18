@@ -7,7 +7,7 @@ const sources = 'google-news-in';
 newsAccordian = document.getElementById('newsAccordian');
 
 const xhr = new XMLHttpRequest
-xhr.open('GET', `http://newsapi.org/v2/top-headlines?sources=${sources}&apiKey=${apikey}`, true);
+xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${sources}&apiKey=${apikey}`, true);
 xhr.onload = function () {
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
